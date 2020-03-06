@@ -109,7 +109,7 @@ ax.xaxis.set_major_locator(MaxNLocator())
 ax.yaxis.set_major_locator(MaxNLocator())
 
 # plot error bars
-plt.errorbar(xvalues, yvalues, yerr=ey, xerr=ex, fmt=',',elinewidth = 0.2, capsize=2, capthick=0.2)
+plt.errorbar(xvalues, yvalues, yerr=ey, xerr=ex, fmt=',',elinewidth = 0.1, capsize=0.3, capthick=0.1)
 
 # Plot line of best fit using gradient and intecept from OLS regression
 x = np.linspace(xmin, xmax, 2)
