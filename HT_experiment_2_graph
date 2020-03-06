@@ -97,7 +97,7 @@ plt.grid(b=True, which='major', linewidth = 0.1, color='k', linestyle='-')
 
 # Show the minor grid lines with very faint black lines
 plt.minorticks_on()
-plt.grid(b=True, which='minor', linewidth = 0.1, color='k', linestyle='-' , alpha=0.6)
+plt.grid(b=True, which='minor', linewidth = 0.1, color='k', linestyle='-' , alpha=0.5)
 
 # Change number of minor gridlines    
 ax = plt.gca()  
@@ -113,7 +113,7 @@ plt.errorbar(xvalues, yvalues, yerr=ey, xerr=ex, fmt=',',elinewidth = 0.1, capsi
 
 # Plot line of best fit using gradient and intecept from OLS regression
 x = np.linspace(xmin, xmax, 2)
-plt.plot(x, x*slope + intercept, linewidth=0.3, alpha=0.5, color = 'r')
+plt.plot(x, x*slope + intercept, linewidth=0.1, alpha=0.5, color = 'r')
 
 # Tidy up layout
 plt.tight_layout()
