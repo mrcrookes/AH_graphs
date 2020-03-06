@@ -50,29 +50,29 @@ ymax = 0.1
 # #### specify uncertainty in x and y values
 
 ex = [
-0.00114,
-0.00140,
-0.00094,
-0.00089,
-0.00102,
-0.00082,
-0.00087,
-0.00076,
-0.00089,
-0.00087,
+0.03,
+0.02,
+0.04,
+0.02,
+0.02,
+0.01,
+0.02,
+0.03,
+0.01,
+0.02,
 ]
 
 ey = [
-0.000280,
-0.000261,
-0.000241,
-0.000220,
-0.000200,
-0.000181,
-0.000160,
-0.000140,
-0.000120,
-0.000101,
+0.005,
+0.007,
+0.006,
+0.006,
+0.005,
+0.007,
+0.006,
+0.007,
+0.007,
+0.004,
 ]
 
 # #### Calculate Ordinary least Squares fit on the data
@@ -93,11 +93,11 @@ plt.xlabel(xlabel,labelpad=10)
 plt.ylabel(ylabel,labelpad=10)
 
 # Show the major grid lines with dark black lines
-plt.grid(b=True, which='major', linewidth = 0.2, color='k', linestyle='-')
+plt.grid(b=True, which='major', linewidth = 0.1, color='k', linestyle='-')
 
 # Show the minor grid lines with very faint black lines
 plt.minorticks_on()
-plt.grid(b=True, which='minor', linewidth = 0.1, color='k', linestyle='-' , alpha=0.5)
+plt.grid(b=True, which='minor', linewidth = 0.1, color='k', linestyle='-' , alpha=0.6)
 
 # Change number of minor gridlines    
 ax = plt.gca()  
@@ -109,11 +109,11 @@ ax.xaxis.set_major_locator(MaxNLocator())
 ax.yaxis.set_major_locator(MaxNLocator())
 
 # plot error bars
-plt.errorbar(xvalues, yvalues, yerr=ey, xerr=ex, fmt=',',elinewidth = 0.1, capsize=0.3, capthick=0.1)
+plt.errorbar(xvalues, yvalues, yerr=ey, xerr=ex, fmt=',',elinewidth = 0.2, capsize=2, capthick=0.2)
 
 # Plot line of best fit using gradient and intecept from OLS regression
 x = np.linspace(xmin, xmax, 2)
-plt.plot(x, x*slope + intercept, linewidth=0.1, alpha=0.5, color = 'r')
+plt.plot(x, x*slope + intercept, linewidth=0.3, alpha=0.5, color = 'r')
 
 # Tidy up layout
 plt.tight_layout()
